@@ -15,8 +15,6 @@ pipeline{
                        
                        sudo apt update
 
-                       cd /home/david/new-pixer
-
                        docker build -t monyslim/pixer:latest .
 
                        docker run -d -p 80:80 monyslim/pixer:latest
