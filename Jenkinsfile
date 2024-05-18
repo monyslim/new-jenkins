@@ -10,8 +10,7 @@ pipeline{
             
         }
     }
-    stages{
-        steps("Build the image"){
+        stage("Build the image"){
             steps{
                 sh '''
                        ## Get the project
@@ -28,7 +27,6 @@ pipeline{
                    
                    
                    '''
-            }
         }
     }
 }
