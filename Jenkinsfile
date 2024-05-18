@@ -1,19 +1,17 @@
 pipeline{
     agent any
     stages{
-        stage('Build'){
+        stage("Test"){
             steps{
                 sh '''
-                    echo "Hello World"
+                       echo "Hello World"
                    '''
             }
-            
         }
-    }
-        stage("Build the image"){
+        stage("Build"){
             steps{
                 sh '''
-                       ## Get the project
+                      ## Get the project
                        
                        sudo apt update
 
@@ -22,11 +20,11 @@ pipeline{
                        docker build -t monyslim/pixer:latest .
 
                        docker run -d -p 80:80 monyslim/pixer:latest
-
-                       
+                   
                    
                    
                    '''
+            }
         }
     }
 }
