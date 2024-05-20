@@ -8,7 +8,7 @@ pipeline{
                    '''
             }
         }
-        stage("Build"){
+        stage("Build now"){
             steps{
                 sh '''
                       ## Get the project
