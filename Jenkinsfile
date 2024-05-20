@@ -18,6 +18,8 @@ pipeline{
                        sudo docker build -t monyslim/pixer:latest .
 
                        sudo docker run -d -p 801:80 monyslim/pixer:latest
+
+                       sudo docker ps
                    
                    
                    
